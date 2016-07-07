@@ -10,7 +10,7 @@
     "lint": "standard",
     "db": "mongod",
     "db-close": "mongod --shutdown",
-    "test": "mocha test/lib/"
+    "test": "mocha test/"
   },
   "eslintConfig": {
     "env": {
@@ -50,6 +50,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-htmlmin": "^2.0.0",
     "gulp-replace": "^0.5.4",
+    "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^2.22.0",
     "lodash": "^4.13.1",
     "mocha": "^2.5.3",

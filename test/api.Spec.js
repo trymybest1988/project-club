@@ -11,7 +11,7 @@ var JSON = require('JSON')
 describe('fetch get 测试', function () {
   this.timeout(10000)
   it('不带参数的get请求', function () {
-    return fetch('http://localhost:4000/scinvoice/apply/getApply')
+    return fetch('http://localhost:4000/scinvoice/apply/list')
     .then(function (response) {
       return response.json()
     }).then(function (json) {
@@ -24,7 +24,7 @@ describe('fetch get 测试', function () {
   })
 
   it('带参数的get请求', function () {
-    return fetch('http://localhost:4000/scinvoice/apply/getApply?name=renmaomin&age=12')
+    return fetch('http://localhost:4000/scinvoice/apply/get?applicationId=abc')
     .then(function (response) {
       return response.json()
     }).then(function (json) {
@@ -43,8 +43,9 @@ describe('fetch get 测试', function () {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: 'Hubot',
-        login: 'hubot'
+        applicationId: 'qwerty',
+        recipientName: 'vbnmsd',
+        recipientPhone: '18610855024'
       })
     }).then(function (response) {
       return response.json()
